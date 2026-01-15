@@ -1,0 +1,21 @@
+<h2>LISTA DE VIATURAS</h2>
+
+<ul>
+    <li *ngFor="let viatura of viaturas()">
+        <strong>Prefixo:</strong> {{ viatura.prefixo }} |
+        <strong>Unidade Operacional:</strong> {{ viatura.unidadeOperacional }} |
+        <strong>Categoria Operacional:</strong> {{ viatura.categoriaOperacional }}
+    </li>
+
+   
+
+</ul>
+
+<h2>LISTA DE VIATURAS POR COMANDO REGIONAL</h2>
+
+<ul>
+    <li *ngFor="let nomeTotal of nomeTotalModel()">
+        <strong>Nome:</strong> {{ nomeTotal.nome }} |
+        <strong>Total:</strong> {{ nomeTotal.total }}
+    </li>
+</ul>
