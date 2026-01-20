@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ViaturaOperacionalModel } from './viatura-operacional-model';
 import { NomeTotalModel } from './nome-total-model';
+import { NomeTipoTotalModel } from './nome-tipo-total-model';
 
 @Injectable({
   providedIn: 'root',
@@ -19,6 +20,22 @@ export class ViaturaOperacionalService {
 
   listarPorComandoReginal(): Observable<NomeTotalModel[]> {
     return this.http.get<NomeTotalModel[]>(`${this.apiUrl}/viaturaPorComandoRegional`);
+  }
+
+  listarPorviaturaTipoComandoRegional(): Observable<NomeTipoTotalModel[]> {
+    return this.http.get<NomeTipoTotalModel[]>(`${this.apiUrl}/viaturaTipoComandoRegional`);
+  }
+
+  listarViaturaTipoUnidadeOperacional(): Observable<NomeTipoTotalModel[]> {
+    return this.http.get<NomeTipoTotalModel[]>(`${this.apiUrl}/viaturaTipoUnidadeOperacional`);
+  }
+
+  listarviaturaPorUnidadeOperacional(): Observable<NomeTotalModel[]> {
+    return this.http.get<NomeTotalModel[]>(`${this.apiUrl}/viaturaPorUnidadeOperacional`);
+  }
+
+  listarviaturaPorTipo(): Observable<NomeTotalModel[]> {
+    return this.http.get<NomeTotalModel[]>(`${this.apiUrl}/viaturaPorTipo`);
   }
 
 }

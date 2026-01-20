@@ -1,9 +1,38 @@
-<div>
+<div style="width: 50%;">
     <canvas baseChart
-        [data]="barChartData"
+        [data]="graficoAtualizadoVTR"
         [options]="barChartOptions"
-        [labels]="barChartLabels"
         [type]="'bar'">
     </canvas>
 
 </div>
+<div style="width: 50%;">
+    <canvas baseChart
+        [data]="graficoAtualizado"
+        [options]="barChartOptions"
+        [type]="'bar'">
+    </canvas>
+</div>
+<div style="width: 50%;">
+    <canvas baseChart
+        [data]="graficoAtualizadoViautraPorCR"
+        [options]="barChartOptions"
+        [type]="'bar'">
+    </canvas>
+</div>
+
+<div style="width: 50%;">
+    <canvas baseChart
+        [data]="graficoviaturaPorUnidadeOperacional"
+        [options]="barChartOptions"
+        [type]="'bar'">
+    </canvas>
+</div>
+<div style="width: 50%;">
+    <canvas baseChart
+        [data]="graficoviaturaPorTipo"
+        [options]="barChartOptions"
+        [type]="'bar'">
+    </canvas>
+</div>
+

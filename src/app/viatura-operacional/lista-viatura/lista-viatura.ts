@@ -28,6 +28,7 @@ export class ListaViaturaComponent implements OnInit {
   carregarViaturas(): void {
     this.viaturaService.listarViaturas().subscribe({
       next: (viaturas) => {
+        console.log('Dados recebidos de VIATURAS:', viaturas);
         this.viaturas.set(viaturas);
        
       },
